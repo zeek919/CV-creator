@@ -1,0 +1,25 @@
+@import '../../../style/media.module.scss';
+
+.wrapper {
+    height: 29em;
+    width: 300px;
+    background-color: rgba($color: #5a3b83, $alpha: 0.31);
+    border-radius: 10px;
+    overflow-y: auto;
+    margin-top: 1em;
+
+    @include for-tablet-up {
+        margin-top: 8em;
+    }
+}
+
+.wrapper::-webkit-scrollbar {
+    background-color: #3d186d;
+    width: 7px;
+    border-radius: 50px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 50px;
+}

@@ -1,0 +1,17 @@
+.header {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonWrapper:first-child {
+    margin: 10px 0;
+}

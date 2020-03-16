@@ -1,0 +1,35 @@
+@import '../../../style/media.module.scss';
+
+.wrapper {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+}
+
+.formWrapper {
+    grid-template-columns: 1fr;
+}
+
+.button {
+    border-radius: 10px;
+    width: 10vw;
+    border: none;
+    text-align: center;
+    padding: 15px 0;
+    margin-left: 1.3em;
+    text-decoration: none;
+    background-color: #240053;
+    color: white;
+}
+
+h1 {
+    font-size: 30px;
+
+    @include for-tablet-up {
+        font-size: 34px;
+    }
+}
+
+.button {
+    width: 160px;
+}

@@ -1,0 +1,41 @@
+.wrapper {
+    background-color: #3d186d;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.date {
+    color: #c8c8c8;
+    font-size: 14px;
+    font-weight: 350;
+    padding: 2px;
+}
+
+.title {
+    padding: 2px;
+    color: white;
+    font-size: 16px;
+}
+
+.describe {
+    padding: 2px;
+    color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.delete {
+    width: 13px;
+    height: 16px;
+    border: none;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url('../../../assets/images/delete.png');
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+}

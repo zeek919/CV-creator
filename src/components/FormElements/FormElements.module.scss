@@ -1,0 +1,134 @@
+@import '../../style/media.module.scss';
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+.dateWrapper {
+    position: relative;
+    display: flex;
+    margin-left: 1.3em;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+    h3 {
+        color: white;
+    }
+}
+
+.dateWrapper > * {
+    width: 50%;
+    margin: 0;
+}
+
+.inside {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+
+    @include for-tablet-up {
+        width: 100%;
+    }
+}
+
+.inside > * {
+    margin: 0;
+    width: 10em;
+    @include for-tablet-up {
+        width: 10.5em;
+    }
+}
+
+label,
+input,
+textarea,
+select {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    color: black;
+    font-size: 12px;
+    margin: 0 30px;
+}
+
+input,
+textarea,
+select {
+    height: 4em;
+    margin: 0 20px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    border-radius: 15px;
+    padding: 20px 10px;
+    cursor: text;
+
+    @include for-tablet-up {
+        width: 300px;
+    }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+label {
+    letter-spacing: 0.05em;
+}
+
+input:placeholder-shown + label,
+textarea:placeholder-shown + label,
+select:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+select:focus::-webkit-input-placeholder {
+    opacity: 1;
+    font-size: 0px;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label,
+textarea:not(:placeholder-shown) + label,
+textarea:focus + label,
+select:not(:placeholder-shown) + label,
+select:focus + label {
+    color: white;
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+textarea {
+    overflow: hidden;
+    resize: none;
+    padding-bottom: 10em;
+}
+
+.minWidth {
+    margin: 0;
+    margin-left: 1.5em;
+    width: 12em;
+}
+
+select {
+    font-size: 14px;
+}

@@ -1,0 +1,31 @@
+@import '../../style/media.module.scss';
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    text-align: center;
+    padding: 20px 70px;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+
+    @include for-tablet-up {
+        font-size: 24px;
+        padding: 25px 120px;
+    }
+}
+
+.button:hover {
+    color: white;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+}

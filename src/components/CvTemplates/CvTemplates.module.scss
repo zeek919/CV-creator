@@ -1,0 +1,40 @@
+@import '../../style/media.module.scss';
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    padding: 20px;
+
+    @include for-tablet-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-desktop-min {
+        background-color: white;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.wrapperBlank {
+    @extend.wrapper;
+    background-color: transparent;
+}
+
+.card {
+    width: 15em;
+    height: 20em;
+    border: 3px solid #3d186d;
+    margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+
+    @include for-desktop-min {
+        margin-bottom: auto;
+    }
+}
+
+.card:hover {
+    border: 10px solid #3d186d;
+    box-shadow: 0px 1px 10px #faf7ff;
+    transition: 0.2s ease-in-out;
+}

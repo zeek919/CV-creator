@@ -1,0 +1,65 @@
+@import '../../style/media.module.scss';
+.wrapper {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 0 10vw;
+    justify-content: center;
+
+    @include for-tablet-up {
+        grid-template-rows: 1fr;
+    }
+
+    @include for-desktop-min {
+        grid-template-columns: 1fr;
+    }
+
+    @include for-desktop-up {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+.insideWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include for-tablet-up {
+        flex-direction: row;
+    }
+}
+
+.change {
+    margin-top: 4em;
+}
+
+.buttonWrapper {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: -5em;
+
+    @include for-tablet-up {
+        margin-top: -6.5em;
+    }
+
+    @include for-desktop-up {
+        margin-top: 2em;
+    }
+}
+
+.buttonWrapper > * {
+    border-radius: 10px;
+    padding: 16px 80px;
+    text-decoration: none;
+    background-color: #240053;
+    color: white;
+    border: none;
+}
+
+.bottomForm {
+    margin-top: 2.5em;
+}

@@ -1,0 +1,50 @@
+@import '../../style/media.module.scss';
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 5em;
+
+    @include for-tablet-up {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: unset;
+        padding: 0 10vw;
+    }
+}
+
+.basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 10px;
+    border-radius: 50%;
+    font-size: 2em;
+
+    @include for-tablet-up {
+        margin: 0;
+        width: 3em;
+        height: 3em;
+    }
+}
+
+.previous {
+    @extend .basic;
+    background-color: #240053;
+    color: white;
+}
+
+.current {
+    @extend .basic;
+    background-color: white;
+    color: #441e76;
+}
+
+.next {
+    @extend .basic;
+    background-color: rgba($color: #ffffff, $alpha: 0.15);
+    color: white;
+}
